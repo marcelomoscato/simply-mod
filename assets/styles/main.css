@@ -142,6 +142,13 @@
     background: #363f44;
     color: #a8bcc5;
   }
+
+  /* To display dark logo instead of default white logo */
+.is-head-transparent .logo-default,
+.dark .logo-default { display: none !important }
+
+.is-head-transparent:not(.has-menu) .logo-dark-mode,
+.dark .logo-dark-mode { display: block }
 /* base
 /* ---------------------------------------------------------- */
 /* ! tailwindcss v3.4.1 | MIT License | https://tailwindcss.com */
