@@ -62,6 +62,15 @@
         var d=document, g=d.createElement('script'), s=d.getElementsByTagName('script')[0];
         g.async=true; g.src=u+'matomo.js'; s.parentNode.insertBefore(g,s);
       })();
+      if (typeof _paq === 'undefined') {
+        const tId = '2';         
+        const imgElement = document.createElement("img");
+        const tUrl = `https://inq.beyondsemicolon.com/matomo.php?idsite=${tId}&rec=1`;
+        imgElement.setAttribute('src', tUrl);
+        imgElement.setAttribute('style', 'border:0');
+        imgElement.setAttribute('alt', 'analytics');
+        document.body.appendChild(imgElement);
+      }
     </script>
     <!-- End Matomo Code -->
 
@@ -128,5 +137,6 @@
 
     {{!-- Pagination Infinite Scroll --}}
     {{#match @custom.pagination "Infinite Scroll"}}{{#if pagination.next}}<script src="{{asset "scripts/pagination.js"}}" defer async></script>{{/if}}{{/match}}
+    <noscript><img src="https://inq.beyondsemicolon.com/matomo.php?idsite=2&amp;rec=1" style="border:0" alt="analytics" /></noscript>
 </body>
 </html>
