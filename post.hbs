@@ -6,6 +6,13 @@
 {{!-- Class for <body> --}}
 {{#contentFor "special_body_class"}}is-article{{/contentFor}}
 
+
+
+<script async src="https://talk.hyvor.com/embed/embed.js" type="module"></script>
+<hyvor-talk-comments website-id="10974" page-id="{{ comment_id }}"></hyvor-talk-comments>
+
+
+    
 <article class="post py-vmin8 relative">
     <header class="post-header godo-canvas">
         {{!-- [Title, Excerpt, Author, DateTime, Share]- partials/article/article-header.hbs --}}
@@ -18,10 +25,6 @@
     {{!-- Article Body - partials/article/article-body.hbs --}}
     {{> "article/article-body"}}
 </article>
-
-<script async src="https://talk.hyvor.com/embed/embed.js" type="module"></script>
-<hyvor-talk-comments website-id="10974" page-id="{{ comment_id }}"></hyvor-talk-comments>
-
 
     
 {{/post}}
